@@ -13,6 +13,14 @@ npm create vite@latest ./ -- --template react
 npm install
 ```
 
+### Installing Prop-Types
+
+Install the npm package
+
+```bash
+npm install --save prop-types
+```
+
 ### Installing Vitest for testing
 
 These [instructions](https://www.robinwieruch.de/vitest-react-testing-library/) explain how to setup Vitest, the key stages summarised below.
@@ -58,7 +66,7 @@ export default defineConfig({
 npm install @testing-library/react @testing-library/jest-dom --save-dev
 ```
 
-6. (MAY REPLACE WITH NON GENERIC STUFF) Add a test setup file in tests/setup.js with the following content:
+6. (CHECK THIS IS NECESSARY) Add a test setup file in tests/setup.js with the following content:
 
 ```js
 import { expect, afterEach } from "vitest";
@@ -72,7 +80,7 @@ afterEach(() => {
 });
 ```
 
-7. (MAY REPLACE WITH NON GENERIC STUFF) Add the test setup in **vite.config.js**.
+7. (CHECK THIS IS NECESSARY) Add the test setup in **vite.config.js**.
 
 ```js
 import { defineConfig } from "vite";
@@ -89,12 +97,24 @@ export default defineConfig({
 });
 ```
 
-8. A final install...
+8. A final install to enable simulating user interactions
 
 ```bash
 npm install @testing-library/user-event --save-dev
 ```
 
-## REVIEWING AND DELETING IF NOT NECESSARY
+### Reducing the react project to a start point
 
-Follow these [instructions](https://gist.github.com/cobyism/4730490), with the following stages:
+Replace the **App.jsx** content with:
+
+```js
+import "./App.css";
+
+function App() {
+  return <>Hello World</>;
+}
+
+export default App;
+```
+
+NEED TO ADD - REDUCING STYLING FILES TO START POINT
