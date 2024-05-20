@@ -103,7 +103,7 @@ export default defineConfig({
 npm install @testing-library/user-event --save-dev
 ```
 
-### Reducing the react project to a start point
+### Tidying up main, index and css files from react start setup
 
 Replace the **App.jsx** content with:
 
